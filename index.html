@@ -1,38 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Calculator</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Calculator UI</title>
+
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+    font-family: Arial;
+}
+
+.calculator {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    width: 260px;
+}
+
+.display {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.operator {
+    background: orange;
+    color: white;
+}
+
+.equal {
+    background: green;
+    color: white;
+    grid-column: span 2;
+}
+
+.clear {
+    background: red;
+    color: white;
+}
+</style>
 </head>
 
 <body>
 
 <div class="calculator">
+    <div class="display"></div>
 
-<input type="text" class="display" placeholder="0">
+    <div class="buttons">
+        <button class="clear">C</button>
+        <button>/</button>
+        <button>*</button>
+        <button>-</button>
 
-<div class="buttons">
-<button>7</button>
-<button>8</button>
-<button>9</button>
-<button>/</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">+</button>
 
-<button>4</button>
-<button>5</button>
-<button>6</button>
-<button>*</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
 
-<button>1</button>
-<button>2</button>
-<button>3</button>
-<button>-</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
 
-<button>0</button>
-<button>.</button>
-<button>=</button>
-<button>+</button>
-</div>
-
+        <button>0</button>
+        <button>.</button>
+        <button class="equal">=</button>
+    </div>
 </div>
 
 </body>
